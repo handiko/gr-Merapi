@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<block>
+  <name>AFSK Filterbank Demod</name>
+  <key>Merapi_fsk_demod</key>
+  <category>[Merapi]</category>
+  <import>import Merapi</import>
+  <make>Merapi.fsk_demod($baud, $fsk_hi_tone, $fsk_lo_tone, $gmu, $in_sps)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Baudrate</name>
+    <key>baud</key>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>FSK "0" Tone</name>
+    <key>fsk_hi_tone</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>FSK "1" Tone</name>
+    <key>fsk_lo_tone</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>MMCR Gain Mu</name>
+    <key>gmu</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Input Samples per Symbol</name>
+    <key>in_sps</key>
+    <type>int</type>
+  </param>
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>afsk</name>
+    <type>float</type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>sync</name>
+    <type>float</type>
+  </source>
+
+  <source>
+    <name>softbits</name>
+    <type>float</type>
+    <optional>1</optional>
+  </source>
+
+  <source>
+    <name>hi</name>
+    <type>float</type>
+    <optional>1</optional>
+  </source>
+
+  <source>
+    <name>low</name>
+    <type>float</type>
+    <optional>1</optional>
+  </source>
+
+</block>
+

@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<block>
+  <name>Merapi IoT PUB</name>
+  <key>Merapi_iot_pub</key>
+  <category>[Merapi]</category>
+  <import>import Merapi</import>
+  <make>Merapi.iot_pub($address, $api_key, $content_type, $accept_type, $field1, $field2, $field3, $field4, $field5, $field6, $field7, $field8)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Host Address</name>
+    <key>address</key>
+    <value>"api.thingspeak.com"</value>
+    <type>string</type>
+  </param>
+
+  <param>
+    <name>API Key</name>
+    <key>api_key</key>
+    <value>" "</value>
+    <type>string</type>
+  </param>
+
+  <param>
+    <name>Content Type</name>
+    <key>content_type</key>
+    <value>"application/x-www-form-urlencoded"</value>
+    <type>string</type>
+  </param>
+
+  <param>
+    <name>Accept Type</name>
+    <key>accept_type</key>
+    <value>"*/*"</value>
+    <type>string</type>
+  </param>
+
+  <param>
+    <name>Field 1 Param</name>
+    <key>field1</key>
+    <value>""</value>
+    <type>string</type>
+  </param>
+
+  <param>
+    <name>Field 2 Param</name>
+    <key>field2</key>
+    <value>""</value>
+    <type>string</type>
+  </param>
+
+  <param>
+    <name>Field 3 Param</name>
+    <key>field3</key>
+    <value>""</value>
+    <type>string</type>
+  </param>
+
+  <param>
+    <name>Field 4 Param</name>
+    <key>field4</key>
+    <value>""</value>
+    <type>string</type>
+  </param>
+
+  <param>
+    <name>Field 5 Param</name>
+    <key>field5</key>
+    <value>""</value>
+    <type>string</type>
+  </param>
+
+  <param>
+    <name>Field 6 Param</name>
+    <key>field6</key>
+    <value>""</value>
+    <type>string</type>
+  </param>
+
+  <param>
+    <name>Field 7 Param</name>
+    <key>field7</key>
+    <value>""</value>
+    <type>string</type>
+  </param>
+
+  <param>
+    <name>Field 8 Param</name>
+    <key>field8</key>
+    <value>""</value>
+    <type>string</type>
+  </param>
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>parse_in</name>
+    <type>message</type>
+    <optional>True</optional>
+  </sink>
+</block>

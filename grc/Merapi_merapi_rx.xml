@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<block>
+  <name>Merapi Rx</name>
+  <key>Merapi_merapi_rx</key>
+  <category>[Merapi]</category>
+  <import>import Merapi</import>
+  <make>Merapi.merapi_rx($baud, $bpf_trans, $filter_len, $fsk_hi_tone, $fsk_lo_tone, $gain, $gmu, $hi, $input_rate, $low, $mu)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Input rate (sps)</name>
+    <key>input_rate</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>AFSK Baudrate</name>
+    <key>baud</key>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>AFSK "0" Tone (Hz)</name>
+    <key>fsk_hi_tone</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>AFSK "1" Tone (Hz)</name>
+    <key>fsk_lo_tone</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>AFSK Filter Transition (Hz)</name>
+    <key>bpf_trans</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Mueller - Muller Mu</name>
+    <key>mu</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Mueller - Muller Gain Mu</name>
+    <key>gmu</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Carrier Detect Gain</name>
+    <key>gain</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Carrier Detect Filter Length</name>
+    <key>filter_len</key>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Carrier Detect Hi Threshold</name>
+    <key>hi</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Carrier Detect Low Threshold</name>
+    <key>low</key>
+    <type>float</type>
+  </param>
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>RF_in</name>
+    <type>complex</type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>frame_out</name>
+    <type>message</type>
+    <optional>True</optional>
+  </source>
+
+  <source>
+    <name>thru</name>
+    <type>complex</type>
+    <optional>True</optional>
+  </source>
+
+  <source>
+    <name>audio</name>
+    <type>float</type>
+    <optional>True</optional>
+  </source>
+
+  <source>
+    <name>afsk</name>
+    <type>message</type>
+    <optional>True</optional>
+  </source>
+
+  <source>
+    <name>hi_symb</name>
+    <type>message</type>
+    <optional>True</optional>
+  </source>
+
+  <source>
+    <name>lo_symb</name>
+    <type>message</type>
+    <optional>True</optional>
+  </source>
+
+  <source>
+    <name>softbits</name>
+    <type>message</type>
+    <optional>True</optional>
+  </source>
+
+  <source>
+    <name>carr_det</name>
+    <type>short</type>
+    <optional>True</optional>
+  </source>
+</block>

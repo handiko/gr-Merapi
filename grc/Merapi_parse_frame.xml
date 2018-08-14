@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<block>
+  <name>Parse and Log Telemetry Frame</name>
+  <key>Merapi_parse_frame</key>
+  <category>[Merapi]</category>
+  <import>import Merapi</import>
+  <make>Merapi.parse_frame($filename)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>CSV Log Filename (fullpath)</name>
+    <key>filename</key>
+    <type>string</type>
+  </param>
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>frame_in</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>info_out</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
+
+  <source>
+    <name>parse_out</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
+</block>

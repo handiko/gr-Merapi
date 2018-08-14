@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<block>
+  <name>Carrier Detect</name>
+  <key>Merapi_carrier_detect</key>
+  <category>[Merapi]</category>
+  <import>import Merapi</import>
+  <make>Merapi.carrier_detect($filter_len, $gain, $hi, $low)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Filter Length</name>
+    <key>filter_len</key>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Gain</name>
+    <key>gain</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Hi Threshold</name>
+    <key>hi</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Low Threshold</name>
+    <key>low</key>
+    <type>float</type>
+  </param>
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>baseband_in</name>
+    <type>complex</type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>trigger_out</name>
+    <type>short</type>
+  </source>
+</block>
+
