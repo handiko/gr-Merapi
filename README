@@ -13,6 +13,7 @@ This project is about a SDR based decoder which run in GNU Radio platform to rec
 
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install libboost-all-dev swig cmake git gcc -y
+sudo apt-get install gnuradio gr-osmosdr rtl-sdr
 
 # Installation
 git clone https://github.com/handiko/gr-Merapi.git
