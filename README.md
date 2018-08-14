@@ -11,18 +11,18 @@ This project is about a SDR based decoder which run in GNU Radio platform to rec
 - GR-OSMOSDR
 - RTL-SDR
 
-$sudo apt-get update && sudo apt-get upgrade -y
-$sudo apt-get install libboost-all-dev swig cmake git gcc -y
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install libboost-all-dev swig cmake git gcc -y
 
 # Installation
-$git clone https://github.com/handiko/gr-Merapi.git
-$cd gr-Merapi
-$mkdir build
-$cd build
-$cmake ../ -DCMAKE_INSTALL_PREFIX=/usr
+git clone https://github.com/handiko/gr-Merapi.git
+cd gr-Merapi
+mkdir build
+cd build
+cmake ../ -DCMAKE_INSTALL_PREFIX=/usr
     OR
-$cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local
+cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local
     (depends on your system)
-$make
-$sudo make install
-$sudo ldconfig
+make
+sudo make install
+sudo ldconfig
