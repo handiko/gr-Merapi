@@ -13,6 +13,8 @@ There are a few dependencies required to compile this project. Which are:
 * GR-OSMOSDR
 * RTL-SDR
 
+![alt text](https://github.com/handiko/gr-Merapi/blob/master/Pic/gnuradio_logo.svg)
+
 Here are the steps required to install them:
 * `sudo apt-get update && sudo apt-get upgrade -y`
 * `sudo apt-get install libboost-all-dev swig cmake git gcc -y`
