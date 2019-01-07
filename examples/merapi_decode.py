@@ -4,7 +4,7 @@
 # GNU Radio Python Flow Graph
 # Title: Merapi Decode - PT. Datto Asia Teknologi
 # Author: Handiko Gesang - Unit Rumah Produksi - PT. Datto Asia Teknologi
-# Generated: Mon Jan  7 20:51:38 2019
+# Generated: Mon Jan  7 21:00:35 2019
 ##################################################
 
 if __name__ == '__main__':
@@ -36,7 +36,7 @@ import time
 
 class merapi_decode(gr.top_block, Qt.QWidget):
 
-    def __init__(self, path="gqrx_20180404_011711_144119900_300000_fc.raw", source=1):
+    def __init__(self, path="gqrx_20180404_011711_144119900_300000_fc.raw", source=0):
         gr.top_block.__init__(self, "Merapi Decode - PT. Datto Asia Teknologi")
         Qt.QWidget.__init__(self)
         self.setWindowTitle("Merapi Decode - PT. Datto Asia Teknologi")
