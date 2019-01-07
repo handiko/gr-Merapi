@@ -19,6 +19,7 @@ Here are the steps required to install them:
 * `sudo apt-get install gnuradio gr-osmosdr rtl-sdr`
 
 # Installation
+This project is built using gr_modtool which bundle up all the script into an installable module. To install this module, open up the Terminal and run:
 * `git clone https://github.com/handiko/gr-Merapi.git`
 * `cd gr-Merapi`
 * `mkdir build`
