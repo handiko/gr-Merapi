@@ -35,8 +35,9 @@ This project is built using gr_modtool which bundle up all the script into an in
 * `sudo ldconfig`
 
 ## Example
-There is a .grc example included in gr-Merapi/examples. Open it up in GNU Radio companion by typing:
+There is a .grc example included in **gr-Merapi/examples**. Open it up in GNU Radio companion by typing:
 * `cd`
 * `cd gr-Merapi/examples`
 * `gnuradio-companion merapi_decode.grc`
 
+![alt text](https://github.com/handiko/gr-Merapi/blob/master/Pic/merapi_decode.grc.png)
