@@ -54,3 +54,8 @@ By telnet-ing to localhost 52001, you would see the received sensor values
 
 The values are logged as a CSV file in your home folder
 ![alt text](https://github.com/handiko/gr-Merapi/blob/master/Pic/gr-Merapi_merapi_log.csv.png)
+
+## Acknowledgement
+* PT. Datto Asia Teknologi
+* Lab. Sensor dan Sistem Telekontrol, Universitas Gadjah Mada
+* ORARI Daerah DIY
