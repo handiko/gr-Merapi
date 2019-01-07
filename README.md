@@ -40,4 +40,17 @@ There is a .grc example included in **gr-Merapi/examples**. Open it up in GNU Ra
 * `cd gr-Merapi/examples`
 * `gnuradio-companion merapi_decode.grc`
 
+The Flowgraph:
 ![alt text](https://github.com/handiko/gr-Merapi/blob/master/Pic/merapi_decode.grc.png)
+
+When it runs, it will receive the telemetry signal at 433,250 MHz from Mt. Merapi.
+![alt text](https://github.com/handiko/gr-Merapi/blob/master/Pic/gr-Merapi_input_spectrum.png)
+
+If the demodulation process success, the following waveform would appears periodically:
+![alt text](https://github.com/handiko/gr-Merapi/blob/master/Pic/gr-Merapi_demodulation.png)
+
+By telnet-ing to localhost 52001, you would see the received sensor values
+![alt text](https://github.com/handiko/gr-Merapi/blob/master/Pic/gr-Merapi_telnet.png)
+
+The values are logged as a CSV file in your home folder
+![alt text](https://github.com/handiko/gr-Merapi/blob/master/Pic/gr-Merapi_merapi_log.csv.png)
