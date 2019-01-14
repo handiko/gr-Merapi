@@ -65,3 +65,6 @@ The values are logged as a CSV file in your home folder
 4. Commit your works (`git commit -m "Adding some blah blah blah.."`)
 5. Push to the branch (`git push -u origin add-blah-blah`)
 6. Create a new Pull Request
+
+
+![](./merapi_station.png)
