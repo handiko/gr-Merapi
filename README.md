@@ -1,6 +1,4 @@
-# gr-Merapi
-Author: Handiko Gesang Anugrah Sejati, S.T.
-
+# gr Merapi - A GNU Radio Block for Receiving and Decoding Telemetry Transmission from Mt. Merapi, Yogyakarta
 This project is about an SDR based decoder which run in GNU Radio platform to receive telemetry transmission from Balerante Station (Mt. Merapi). This transmission contains 6 data fields (horizontal & vertical vibration, temperature, humidity, rain measurement, and sulphuric compound gas. The data protocol was made by Mr. Angga and sponsored by PT. Datto Asia Technology and Sensor and Sistem Telecontrol Lab, Universitas Gadjah Mada.
 Tested on GNU Radio 3.7.10 and Ubuntu 16.04
 
@@ -13,7 +11,7 @@ There are a few dependencies required to compile this project. Which are:
 * GR-OSMOSDR
 * RTL-SDR
 
-![alt text](https://github.com/handiko/gr-Merapi/blob/master/Pic/gnuradio_logo.svg)
+![](./gnuradio_logo.svg)
 
 Here are the steps required to install them:
 * `sudo apt-get update && sudo apt-get upgrade -y`
@@ -41,21 +39,29 @@ There is a .grc example included in **gr-Merapi/examples**. Open it up in GNU Ra
 * `gnuradio-companion merapi_decode.grc`
 
 The Flowgraph:
-![alt text](https://github.com/handiko/gr-Merapi/blob/master/Pic/merapi_decode.grc.png)
+![](./merapi_decode.grc.png)
 
 When it runs, it will receive the telemetry signal at 433,250 MHz from Mt. Merapi.
-![alt text](https://github.com/handiko/gr-Merapi/blob/master/Pic/gr-Merapi_input_spectrum.png)
+![](./gr-Merapi_input_spectrum.png)
 
 If the demodulation process success, the following waveform would appears periodically:
-![alt text](https://github.com/handiko/gr-Merapi/blob/master/Pic/gr-Merapi_demodulation.png)
+![](./gr-Merapi_demodulation.png)
 
 By telnet-ing to localhost 52001, you would see the received sensor values
-![alt text](https://github.com/handiko/gr-Merapi/blob/master/Pic/gr-Merapi_telnet.png)
+![](./gr-Merapi_telnet.png)
 
 The values are logged as a CSV file in your home folder
-![alt text](https://github.com/handiko/gr-Merapi/blob/master/Pic/gr-Merapi_merapi_log.csv.png)
+![](./gr-Merapi_merapi_log.csv.png)
 
 ## Acknowledgement
 * PT. Datto Asia Teknologi
 * Lab. Sensor dan Sistem Telekontrol, Universitas Gadjah Mada
 * ORARI Daerah DIY
+
+## Contributing
+1. Fork it [https://github.com/handiko/gr-Merapi/fork](https://github.com/handiko/gr-Merapi/fork)
+2. Create new branch (`git checkout -b add-blah-blah`)
+3. Do some editing / create new feature
+4. Commit your works (`git commit -m "Adding some blah blah blah.."`)
+5. Push to the branch (`git push -u origin add-blah-blah`)
+6. Create a new Pull Request
