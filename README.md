@@ -19,7 +19,7 @@ Here are the steps required to install them:
 * `sudo apt-get install gnuradio gr-osmosdr rtl-sdr`
 
 ## Installation
-This project is built using gr_modtool which bundle up all the script into an installable module. To install this module, open up the Terminal and run:
+This project is built using the gr_modtool which bundle up all the script into an installable module. To install, just open up the Terminal and run:
 * `git clone https://github.com/handiko/gr-Merapi.git`
 * `cd gr-Merapi`
 * `mkdir build`
@@ -41,7 +41,7 @@ There is a .grc example included in **gr-Merapi/examples**. Open it up in GNU Ra
 The Flowgraph:
 ![](./merapi_decode.grc.png)
 
-When it runs, it will receive the telemetry signal at 433,250 MHz from Mt. Merapi.
+When it runs, it will receive the telemetry signal at 433,250 MHz from Mt. Merapi (given that you are in the signal coverage area).
 ![](./gr-Merapi_input_spectrum.png)
 
 If the demodulation process success, the following waveform would appears periodically:
