@@ -1,5 +1,6 @@
 # gr-Merapi - A GNU Radio Block for Telemetry
-This project is about an SDR based decoder which run on the GNU Radio software to receive telemetry transmission from Balerante Station (Mt. Merapi). This transmission contains 6 data fields (horizontal & vertical vibration, temperature, humidity, rain measurement, and sulphuric compound gas. The data protocol was made by Mr. Angga and sponsored by PT. Datto Asia Technology and Sensor and Telecontrolling Systems Lab., Universitas Gadjah Mada.
+This project is about an SDR based decoder which runs on the GNU Radio software to receive telemetry transmission from the Balerante Station (Mt. Merapi). This transmission contains 6 data fields (horizontal & vertical vibration, temperature, humidity, rain measurement, and sulphuric compound gas. The data protocol was made by Mr. Angga and sponsored by PT. Data Asia Technology and Sensor and Telecontrolling Systems Lab., Universitas Gadjah Mada.
+
 Tested on GNU Radio 3.7.10 and Ubuntu 16.04
 
 ## Dependencies
