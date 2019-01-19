@@ -45,7 +45,7 @@ The Flowgraph:
 When it runs, it will receive the telemetry signal at 433,250 MHz from Mt. Merapi (given that you are in the signal coverage area).
 ![](./gr-Merapi_input_spectrum.png)
 
-If the demodulation process success, the following waveform would appears periodically:
+If the demodulation process success, the following waveform would appear periodically:
 ![](./gr-Merapi_demodulation.png)
 
 By telnet-ing to localhost 52001, you would see the received sensor values
